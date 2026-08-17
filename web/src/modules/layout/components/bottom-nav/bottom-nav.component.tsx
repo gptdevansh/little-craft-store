@@ -16,7 +16,7 @@ export function BottomNav() {
 
   return (
     <nav
-      className="fixed bottom-0 w-full flex justify-around items-center h-[72px] px-2 bg-surface/95 backdrop-blur-md z-50 rounded-t-2xl shadow-[0px_-4px_16px_0px_rgba(0,0,0,0.04)] md:hidden border-t border-outline-variant/10"
+      className="fixed bottom-0 left-0 right-0 w-full flex justify-around items-center h-[64px] px-3 bg-surface/95 backdrop-blur-md z-50 rounded-t-2xl shadow-[0px_-4px_20px_0px_rgba(0,0,0,0.06)] md:hidden border-t border-outline-variant/20"
       aria-label="Mobile navigation"
     >
       {BOTTOM_ITEMS.map((item) => {
@@ -25,13 +25,20 @@ export function BottomNav() {
           <Link
             key={item.id}
             href={item.href}
-            className={`flex flex-col items-center justify-center p-2 min-h-[var(--spacing-touch-target)] min-w-[64px] transition-all active:scale-95 ${
+            className={`flex flex-col items-center justify-center py-1 px-3 min-w-[60px] transition-all active:scale-95 ${
               isActive
-                ? 'bg-secondary-container text-on-secondary-container rounded-2xl'
-                : 'text-on-surface-variant hover:text-primary'
+                ? 'text-primary font-semibold'
+                : 'text-on-surface-variant/70 hover:text-primary'
             }`}
           >
-            <Icon name={item.icon} size={24} fill={isActive} />
+            <div
+              className={`p-1.5 rounded-full transition-all flex items-center justify-center ${
+                isActive ? 'bg-secondary-container text-on-secondary-container shadow-xs' : ''
+              }`}
+            >
+              <Icon name={item.icon} size={20} fill={isActive} />
+            </div>
+            <span className="text-[10px] tracking-tight font-medium mt-0.5">{item.label}</span>
           </Link>
         );
       })}

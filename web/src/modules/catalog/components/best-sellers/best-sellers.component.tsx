@@ -26,15 +26,15 @@ export function BestSellers() {
       </div>
 
       {/* Horizontal scroll carousel */}
-      <div className="flex overflow-x-auto gap-6 px-[var(--spacing-container-margin)] pb-8 snap-x snap-mandatory hide-scrollbar items-start max-w-7xl mx-auto">
-        {products.map((product, idx) => (
+      <div className="flex overflow-x-auto gap-4 md:gap-6 px-[var(--spacing-container-margin)] pb-6 snap-x snap-mandatory hide-scrollbar items-stretch max-w-7xl mx-auto">
+        {products.map((product) => (
           <div
             key={product.id}
-            className={`flex-none snap-start ${idx % 2 === 0 ? 'w-[280px]' : 'w-[240px]'}`}
+            className="flex-none snap-start w-[72vw] sm:w-[240px] md:w-[260px]"
           >
             <ProductCard
               product={product}
-              aspectRatio={idx % 2 === 0 ? 'square' : 'portrait'}
+              aspectRatio="square"
             />
           </div>
         ))}
