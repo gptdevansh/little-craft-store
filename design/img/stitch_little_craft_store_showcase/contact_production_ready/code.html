@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Contact - Little Craft Store</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e5e2de",
+                        "primary-fixed": "#ffd7ef",
+                        "surface-container-low": "#f7f3ef",
+                        "on-tertiary-container": "#ffa1bd",
+                        "on-tertiary-fixed": "#3f001c",
+                        "on-background": "#1c1c19",
+                        "secondary": "#755567",
+                        "on-primary-fixed-variant": "#752865",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#ddd9d6",
+                        "secondary-fixed-dim": "#e4bbd0",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#f1ede9",
+                        "outline-variant": "#d5c1cc",
+                        "inverse-on-surface": "#f4f0ec",
+                        "inverse-surface": "#31302e",
+                        "tertiary-container": "#950c4e",
+                        "secondary-container": "#ffd4e9",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#ffade6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#fd9ee2",
+                        "tertiary": "#6e0037",
+                        "on-surface-variant": "#51434b",
+                        "surface-bright": "#fdf9f5",
+                        "outline": "#83727c",
+                        "primary": "#5f1553",
+                        "tertiary-fixed": "#ffd9e2",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#8e0248",
+                        "secondary-fixed": "#ffd8eb",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#91417f",
+                        "on-surface": "#1c1c19",
+                        "on-secondary-fixed": "#2c1322",
+                        "tertiary-fixed-dim": "#ffb1c7",
+                        "primary-container": "#7b2e6b",
+                        "surface-variant": "#e5e2de",
+                        "primary-fixed-dim": "#ffade6",
+                        "on-secondary-fixed-variant": "#5c3e4f",
+                        "surface-container-high": "#ebe7e4",
+                        "surface": "#fdf9f5",
+                        "error-container": "#ffdad6",
+                        "background": "#fdf9f5",
+                        "on-primary-fixed": "#3a0032",
+                        "on-secondary-container": "#7a596b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-margin": "20px",
+                        "gutter": "16px",
+                        "unit": "8px",
+                        "touch-target": "44px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Fraunces", "serif"],
+                        "body-lg": ["Poppins", "sans-serif"],
+                        "label-sm": ["Poppins", "sans-serif"],
+                        "headline-xl": ["Fraunces", "serif"],
+                        "headline-lg": ["Fraunces", "serif"],
+                        "headline-lg-mobile": ["Fraunces", "serif"],
+                        "body-md": ["Poppins", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "30px", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "38px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "34px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col relative overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-surface dark:bg-surface-container-low transition-colors duration-300">
+<div class="flex justify-between items-center px-container-margin h-touch-target w-full">
+<button aria-label="Go back" class="text-primary dark:text-primary-fixed cursor-pointer active:scale-95 hover:text-primary-container transition-colors flex items-center justify-center w-[44px] h-[44px]">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed flex-1 text-center pr-[44px]">Contact</h1>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col px-container-margin py-8 gap-12 max-w-md mx-auto w-full relative z-10">
+<!-- Header & Reassurance -->
+<section class="flex flex-col items-center text-center space-y-4">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Get in Touch</h2>
+<div class="flex items-center gap-2 bg-surface-container px-4 py-2 rounded-full border border-outline-variant/30">
+<span class="material-symbols-outlined text-primary-container icon-fill" data-icon="energy_savings_leaf" style="color: #8FA876; font-size: 18px;">energy_savings_leaf</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Usually replies within a day</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-[280px]">
+                Have a question about a handcrafted piece or a custom order? We'd love to hear from you.
+            </p>
+</section>
+<!-- Primary Action: WhatsApp -->
+<section class="flex flex-col items-center w-full">
+<a aria-label="Chat on WhatsApp" class="w-full flex items-center justify-center gap-3 bg-tertiary text-on-tertiary rounded-full py-4 px-6 shadow-md active:scale-95 transition-transform duration-200 min-h-[64px] text-lg font-medium" href="#">
+<span class="material-symbols-outlined text-[28px]" data-icon="chat">chat</span>
+<span>Chat on WhatsApp</span>
+</a>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-4 opacity-70">+1 (555) 123-4567</span>
+</section>
+<!-- Divider -->
+<div class="w-full flex items-center gap-4 opacity-50 my-2">
+<div class="flex-1 h-px bg-outline-variant"></div>
+<span class="material-symbols-outlined text-outline" data-icon="favorite">favorite</span>
+<div class="flex-1 h-px bg-outline-variant"></div>
+</div>
+<!-- Secondary Actions -->
+<section class="flex flex-col gap-5 w-full">
+<a class="w-full flex items-center justify-center gap-3 border-2 border-primary-container text-primary-container rounded-full py-3 px-6 active:scale-95 transition-transform duration-200 min-h-[56px] hover:bg-surface-container-lowest" href="#">
+<span class="material-symbols-outlined" data-icon="photo_camera">photo_camera</span>
+<span class="font-label-sm text-label-sm">@littlecraftstore</span>
+</a>
+<div class="grid grid-cols-2 gap-4">
+<a class="flex flex-col items-center justify-center gap-2 border border-outline-variant rounded-xl p-4 active:scale-95 transition-transform duration-200 hover:bg-surface-container-low min-h-[96px]" href="#">
+<span class="material-symbols-outlined text-on-surface-variant text-[28px]" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-label-sm text-label-sm text-center text-on-surface-variant">Shop on<br>Amazon</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-2 border border-outline-variant rounded-xl p-4 active:scale-95 transition-transform duration-200 hover:bg-surface-container-low min-h-[96px]" href="#">
+<span class="material-symbols-outlined text-on-surface-variant text-[28px]" data-icon="storefront">storefront</span>
+<span class="font-label-sm text-label-sm text-center text-on-surface-variant">Shop on<br>Flipkart</span>
+</a>
+</div>
+</section>
+</main>
+<!-- Decorative Floral Accent (Organic Asymmetry) -->
+<div class="fixed top-[15%] -left-8 pointer-events-none opacity-30 z-0 w-32 h-32 -rotate-12">
+<div class="bg-contain bg-no-repeat bg-center absolute w-full h-full" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAysdEa9Q0LITZDTsur6sME6llxe6ptaw6i1GX92xvxUzR44h9cHJ4P7p41v6tF0WYDh3-yUOVeZdWGb8Ye0aYkEJICkDK9utqePjJD8ptQFveCVNueU7gALYD2wMCB0Mq1T4HHrs_6Aayv8cCBg12gveIEF3gwAeaXAuhzD11jgmCa8NTWSKaFkTj2tYeTxFVeiOKgCwH2YUEe5cwrr_injPMqTYO6lbvOENjKQAPbsFLfnBkzbvFiPA')"></div>
+</div>
+<div class="fixed bottom-0 right-0 pointer-events-none opacity-40 z-0 w-56 h-56 translate-x-[15%] translate-y-[15%]">
+<div class="bg-contain bg-no-repeat bg-bottom right-0 absolute w-full h-full" data-alt="A delicate, minimalist watercolor illustration of a single botanical branch with soft pink blossoms and sage green leaves, set against a transparent background. The style is handcrafted, organic, and elegant, aligning with a premium boutique brand identity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAysdEa9Q0LITZDTsur6sME6llxe6ptaw6i1GX92xvxUzR44h9cHJ4P7p41v6tF0WYDh3-yUOVeZdWGb8Ye0aYkEJICkDK9utqePjJD8ptQFveCVNueU7gALYD2wMCB0Mq1T4HHrs_6Aayv8cCBg12gveIEF3gwAeaXAuhzD11jgmCa8NTWSKaFkTj2tYeTxFVeiOKgCwH2YUEe5cwrr_injPMqTYO6lbvOENjKQAPbsFLfnBkzbvFiPA')"></div>
+</div>
+</body></html>

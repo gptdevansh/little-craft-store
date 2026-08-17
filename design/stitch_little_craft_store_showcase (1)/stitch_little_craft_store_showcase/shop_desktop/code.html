@@ -1,0 +1,263 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Shop - Little Craft Store</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#ffd8eb",
+                        "on-secondary-fixed": "#2c1322",
+                        "surface-container-low": "#f7f3ef",
+                        "secondary": "#755567",
+                        "primary-fixed-dim": "#ffade6",
+                        "on-secondary-fixed-variant": "#5c3e4f",
+                        "on-error-container": "#93000a",
+                        "surface-bright": "#fdf9f5",
+                        "surface-dim": "#ddd9d6",
+                        "secondary-fixed-dim": "#e4bbd0",
+                        "on-tertiary-fixed": "#3f001c",
+                        "primary": "#5f1553",
+                        "on-primary-fixed": "#3a0032",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#91417f",
+                        "surface-container-highest": "#e5e2de",
+                        "on-surface-variant": "#51434b",
+                        "surface-variant": "#e5e2de",
+                        "surface-container-high": "#ebe7e4",
+                        "tertiary-fixed": "#ffd9e2",
+                        "on-surface": "#1c1c19",
+                        "surface": "#fdf9f5",
+                        "inverse-on-surface": "#f4f0ec",
+                        "background": "#fdf9f5",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb1c7",
+                        "on-tertiary-fixed-variant": "#8e0248",
+                        "tertiary-container": "#950c4e",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#1c1c19",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#ffd4e9",
+                        "outline-variant": "#d5c1cc",
+                        "primary-fixed": "#ffd7ef",
+                        "inverse-primary": "#ffade6",
+                        "on-primary-container": "#fd9ee2",
+                        "error": "#ba1a1a",
+                        "primary-container": "#7b2e6b",
+                        "on-tertiary-container": "#ffa1bd",
+                        "surface-container": "#f1ede9",
+                        "outline": "#83727c",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#752865",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#7a596b",
+                        "inverse-surface": "#31302e",
+                        "tertiary": "#6e0037"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "touch-target": "44px",
+                        "gutter": "16px",
+                        "container-margin": "20px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Poppins"],
+                        "label-sm": ["Poppins"],
+                        "headline-md": ["Fraunces"],
+                        "headline-xl": ["Fraunces"],
+                        "body-md": ["Poppins"],
+                        "headline-lg-mobile": ["Fraunces"],
+                        "headline-lg": ["Fraunces"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "30px", "fontWeight": "500" }],
+                        "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "34px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "38px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #fdf9f5;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #d5c1cc;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #83727c;
+        }
+        
+        .whatsapp-button {
+            background-color: #E14F87;
+            color: #FFFBF7;
+            transition: background-color 0.2s ease;
+        }
+        .whatsapp-button:hover {
+            background-color: #C43A6E;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-lg min-h-screen flex flex-col antialiased">
+<!-- TopNavBar (Shared Component) -->
+<nav class="bg-background dark:bg-background w-full top-0 sticky z-50">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-gutter py-unit h-touch-target">
+<div class="font-headline-lg text-headline-lg text-primary dark:text-primary-fixed-dim">
+                Little Craft Store
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant pb-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300 font-label-sm text-label-sm" href="#">Home</a>
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 font-semibold hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300 font-label-sm text-label-sm scale-95 transition-transform duration-150" href="#">Shop</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant pb-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300 font-label-sm text-label-sm" href="#">Our Story</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant pb-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300 font-label-sm text-label-sm" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="hidden md:flex items-center justify-center px-4 py-2 border border-primary-container text-primary-container rounded-full font-label-sm text-label-sm hover:bg-surface-container transition-colors h-touch-target">
+                    Marketplace
+                </button>
+<button class="whatsapp-button rounded-full px-6 py-2 font-label-sm text-label-sm flex items-center h-touch-target">
+                    WhatsApp Us
+                </button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow max-w-7xl mx-auto w-full px-container-margin py-8 md:py-16">
+<!-- Header -->
+<header class="text-center mb-16">
+<h1 class="font-headline-xl text-headline-xl text-primary mb-4">Curated Collection</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                Discover our handcrafted hair accessories, each piece uniquely designed to add a touch of warmth and elegance to your everyday style.
+            </p>
+</header>
+<!-- Category Filter -->
+<div class="mb-12 overflow-x-auto custom-scrollbar pb-4">
+<ul class="flex space-x-8 md:justify-center min-w-max px-4">
+<li>
+<button class="text-primary font-label-sm text-label-sm border-b-2 border-primary pb-1">All</button>
+</li>
+<li>
+<button class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors pb-1">Scrunchies</button>
+</li>
+<li>
+<button class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors pb-1">Hair Bands</button>
+</li>
+<li>
+<button class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors pb-1">Clips</button>
+</li>
+<li>
+<button class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors pb-1">Accessories</button>
+</li>
+</ul>
+</div>
+<!-- Product Grid (Asymmetric) -->
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-12">
+<!-- Product 1 (Portrait 4:5) -->
+<article class="flex flex-col group">
+<div class="relative w-full aspect-[4/5] bg-surface-container-low mb-4 overflow-hidden rounded-[8px] border border-outline-variant/30">
+<img class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105" data-alt="A meticulously crafted velvet scrunchie in a rich burgundy color, resting elegantly on a smooth, slightly textured linen surface. The soft, natural light enhances the plush texture of the velvet, creating gentle highlights and deep shadows. The overall mood is warm, intimate, and highly tactile, reflecting a premium, handcrafted boutique aesthetic with a soft pink background undertone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI42qXi1nCbY6GvjF8snIib11YPddP6SfyBPDLs0fc8TwXNUIt9k778vy196NB9ZmdhfxRngL-xlZrFWH95i6SkEP_qkqG0xMJJluMJ7LIZyDoo5MmwyMHAot046--Tcds_5WLEdywQJiojRwN55D0sKJ4KZZYy_sbg9u9E2cqSYM10GeYiWCb5rAwHXQd8jq51ONtG2eksT6E1WKXS3mQj5Y-jX9OAjqykLp6bbKQIY2pWaAX59qrGw">
+<div class="absolute top-3 left-3 bg-[#8FA876] text-white p-1.5 rounded-full flex items-center justify-center" title="Hand-stitched">
+<span class="material-symbols-outlined text-[16px]">eco</span>
+</div>
+</div>
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-md text-headline-md text-on-surface">Burgundy Velvet Dream</h2>
+<span class="font-label-sm text-label-sm text-secondary ml-4 mt-1">$18.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">Oversized plush scrunchie.</p>
+<button class="whatsapp-button w-full py-3 rounded-full font-label-sm text-label-sm flex items-center justify-center space-x-2 h-touch-target">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Order on WhatsApp</span>
+</button>
+</article>
+<!-- Product 2 (Square 1:1) -->
+<article class="flex flex-col group">
+<div class="relative w-full aspect-square bg-surface-container-low mb-4 overflow-hidden rounded-[8px] border border-outline-variant/30">
+<img class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105" data-alt="A delicate, gold-plated hair clip adorned with small, irregular freshwater pearls, placed delicately on a piece of rustic parchment paper. The lighting is bright and airy, casting soft, diffused shadows that emphasize the subtle organic minimalism of the design. The setting suggests a tranquil, handcrafted jewelry studio with a warm, inviting atmosphere and plenty of negative space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGAHIhErMbpOxCVbYXtsWRsgkJw8K2Wc5iLNlVpYtLy7VUqVPvqUmnUz5tRz9o3VcfocetRW-uXtIN6H5I7fg2Fc7eNNjCCjqBB_IcZpzJNYph2WCKtOEyXUnLa0aHU1oE_0MkFWlg5KSnpguuBuTeEQlML0A8n3xvVVkbP-bODgHEe_yC2-myk6PYCjBJwqs8PbwO82Te2ptWC9uZ8-Nn9WOwhyA88s-Af_IP51fSZFQpBStZMQ0l2g">
+</div>
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-md text-headline-md text-on-surface">Pearl Drop Clip</h2>
+<span class="font-label-sm text-label-sm text-secondary ml-4 mt-1">$22.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">Minimalist gold and pearl.</p>
+<button class="whatsapp-button w-full py-3 rounded-full font-label-sm text-label-sm flex items-center justify-center space-x-2 h-touch-target">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Order on WhatsApp</span>
+</button>
+</article>
+<!-- Product 3 (Portrait 4:5) -->
+<article class="flex flex-col group">
+<div class="relative w-full aspect-[4/5] bg-surface-container-low mb-4 overflow-hidden rounded-[8px] border border-outline-variant/30">
+<img class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105" data-alt="A wide, softly padded hairband covered in a textured, muted sage green linen fabric. It sits elegantly on a light wooden table next to a small sprig of dried eucalyptus. The lighting is soft and natural, evoking a calm, earthy, and organic aesthetic. The composition uses generous white space, perfectly capturing the handcrafted boutique style with subtle botanical accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDxOcLSPXn4iMqVLYI6bZWg0lrynaX_PYioxDFSAcDHTiu7krPe1FsmC4k8qHumTR6wiZAxHV2MkxOaiivM59SuUpC_63nCUtFTmuyj8yaRCykwBtGs2T84YLcTAxnIOrewYxhRN7Pr2ns6ns0ih93oY0TTw77rjn_2prffoCnsWF-9OleL52Ndsa7S6hHEQinfPFphliq7eRD2Rkqp7sJycWaWe4Hf369XxzxGdytaRpzjBBAW59ymA">
+<div class="absolute top-3 left-3 bg-[#8FA876] text-white p-1.5 rounded-full flex items-center justify-center" title="Eco-friendly">
+<span class="material-symbols-outlined text-[16px]">spa</span>
+</div>
+</div>
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-md text-headline-md text-on-surface">Sage Linen Band</h2>
+<span class="font-label-sm text-label-sm text-secondary ml-4 mt-1">$28.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">Comfort-fit padded band.</p>
+<button class="whatsapp-button w-full py-3 rounded-full font-label-sm text-label-sm flex items-center justify-center space-x-2 h-touch-target">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Order on WhatsApp</span>
+</button>
+</article>
+<!-- Product 4 (Square 1:1) -->
+<article class="flex flex-col group">
+<div class="relative w-full aspect-square bg-surface-container-low mb-4 overflow-hidden rounded-[8px] border border-outline-variant/30">
+<img class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105" data-alt="A set of three slim, silk scrunchies in complementary shades of soft blush pink, champagne, and ivory. They are casually intertwined on a clean, bright white background. The high-key lighting creates a pristine, modern light-mode feel, while the smooth texture of the silk stands out. The image conveys a sense of premium luxury and intentional, tactile design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq9PrlgykouK1m9mF1ynIygdWJ-G876Pg8kfE5o90LjGYNyphVLlvW8mlGy1PqP1Y-srbBS72P2UVrKRePlqvWqZLkglESuBOC25AUk563ivgnutipyO_nQTvy-lUO64UlDrxK8Loj7gpmNcxveC34Dj-98IBVUQuQ5JyrgE004zeDTraEnO5FgBE4fa_5RmA7rOOB7wft7RckJaGMA74lusugDoeYZTOnLZQTNhR5RZfyzM9ludRiGA">
+</div>
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-md text-headline-md text-on-surface">Silk Trio Set</h2>
+<span class="font-label-sm text-label-sm text-secondary ml-4 mt-1">$35.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">Everyday luxury silk.</p>
+<button class="whatsapp-button w-full py-3 rounded-full font-label-sm text-label-sm flex items-center justify-center space-x-2 h-touch-target">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Order on WhatsApp</span>
+</button>
+</article>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container-low dark:bg-surface-container w-full mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-container-margin py-12 max-w-7xl mx-auto">
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim mb-6 md:mb-0">
+                Little Craft Store
+            </div>
+<div class="flex flex-wrap justify-center gap-6 mb-6 md:mb-0">
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim underline underline-offset-4 hover:opacity-80 transition-opacity font-label-sm text-label-sm min-w-[44px] min-h-[44px] flex items-center" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim underline underline-offset-4 hover:opacity-80 transition-opacity font-label-sm text-label-sm min-w-[44px] min-h-[44px] flex items-center" href="#">Shipping Info</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim underline underline-offset-4 hover:opacity-80 transition-opacity font-label-sm text-label-sm min-w-[44px] min-h-[44px] flex items-center" href="#">Wholesale</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim underline underline-offset-4 hover:opacity-80 transition-opacity font-label-sm text-label-sm min-w-[44px] min-h-[44px] flex items-center" href="#">FAQ</a>
+</div>
+<div class="text-secondary dark:text-secondary-fixed-dim font-body-md text-body-md text-center md:text-right">
+                © 2024 Little Craft Store. Handcrafted with love.
+            </div>
+</div>
+</footer>
+</body></html>
