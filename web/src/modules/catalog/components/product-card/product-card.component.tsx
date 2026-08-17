@@ -1,6 +1,7 @@
 import type { Product } from '@/core/models';
 import { SITE_CONFIG } from '@/core/data';
 import { Icon } from '@/shared';
+import Image from 'next/image';
 
 export interface ProductCardProps {
   product: Product;
@@ -20,11 +21,12 @@ export function ProductCard({ product, aspectRatio = 'square' }: ProductCardProp
       <div
         className={`relative w-full ${aspect} bg-surface-container-low mb-4 overflow-hidden rounded-lg border border-outline-variant/30`}
       >
-        <img
+        <Image
           src={product.imageUrl}
           alt={product.imageAlt}
-          className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
-          loading="lazy"
+          fill
+          sizes="(max-width: 768px) 50vw, 33vw"
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
         {product.badge && (
           <div

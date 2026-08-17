@@ -1,4 +1,5 @@
 import { Button, Icon } from '@/shared';
+import Image from 'next/image';
 
 export function HeroSection() {
   return (
@@ -24,12 +25,14 @@ export function HeroSection() {
 
       {/* Hero Image */}
       <div className="w-full md:w-1/2 relative mt-2 md:mt-0 z-10">
-        <div className="aspect-[4/3] md:aspect-[4/4] rounded-[2rem] overflow-hidden border border-outline-variant/20 shadow-sm">
-          <img
+        <div className="relative aspect-[4/3] md:aspect-[4/4] rounded-[2rem] overflow-hidden border border-outline-variant/20 shadow-sm">
+          <Image
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-hKSsFsGxKAmLwTQce0tBJtqKHH5vcbfnCzIjK51c6DVc0c8f4UvQH3dR8ptGFkSEbPo_WAuQgsOvaOAyqQEsAPAXjHc_YnduXz8tmAiaosGqRYI0KStw7Y-4-KXPsSJ5anMZD3zA7iYBSKifvj6KRMJzsS01ue7vLPBeQ-1J-jdsttMTB_MYTurn-Gt9RanYBc6u7z2eWEtyuGGh19JBkWivn-D9N_tW-2LVI3X6SJgUn5UAT42XwA"
             alt="Handmade silk and velvet scrunchies in warm plum and blush tones on linen"
-            className="w-full h-full object-cover object-center"
-            loading="eager"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            priority
+            className="object-cover object-center"
           />
         </div>
       </div>

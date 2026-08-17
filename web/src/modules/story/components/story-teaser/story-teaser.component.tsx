@@ -1,16 +1,18 @@
 import { Icon } from '@/shared';
+import Image from 'next/image';
 
 export function StoryTeaser() {
   return (
     <section className="py-20 px-[var(--spacing-container-margin)] md:py-28 relative">
       <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
         {/* Portrait Circle */}
-        <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-[6px] border-blossom-bg shadow-sm shrink-0 relative">
-          <img
+        <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-[6px] border-blossom-bg shadow-sm shrink-0">
+          <Image
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuA62HCr7FKf9l0euJaMkA2KQzMNZ3y4TLE7SFlnmaorI6HXuqn8zcHoshAbOM47bgi8K-6XIUR0S1NxqQo80MeC-Z3WDHgsh9eOeprO44oqulDAWzeY74Q4cGwWnOK9gD2dV_qcAfNXM3HY0_gsrKXExWXtw0VIL6lm0ZBb0O9GDnWrXtC8n7s8h26Vd989dt23c0ibptZt6s7nvIuVe_sRtU1_Cgqv5Y8bVvOM3ZzeZHOc6t8jjNaCYw"
             alt="Artisan hand-stitching a beautiful patterned scrunchie in a sunlit studio"
-            className="object-cover w-full h-full"
-            loading="lazy"
+            fill
+            sizes="(max-width: 768px) 192px, 256px"
+            className="object-cover"
           />
         </div>
 

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { Button, Icon } from '@/shared';
 
 export const metadata: Metadata = {
@@ -13,11 +14,13 @@ export default function OurStoryPage() {
       {/* Hero Image */}
       <section className="w-full max-w-4xl px-[var(--spacing-container-margin)] pt-6 pb-8 relative flex flex-col items-center">
         <div className="relative w-full max-w-2xl aspect-[4/5] md:aspect-video rounded-xl overflow-hidden shadow-sm bg-surface-container-low z-10 p-2 bg-white">
-          <img
+          <Image
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ-CtqR6gPBmqfF3E8c40QDk69zxGubbFaqcz_Y1agQPzNr6YH7N2Dr_PX8GAruhAl0kzo615uTBGMHqdkQCpBM4cpUt0NN-lC5pUTkwcEJXbBH8mQfczLeizujG_j8fgBdRSr0ECQ7A4DCtl5QW83ulQ7wPOSAxL9KeDb0A-NqaVt3Z0N4XA8vRZsqQSkAJNKLopS8GYLlMQovJ6sIfyOY20TxnHIPBf68eV9JUv0wwR0DfwJ7AWAJg"
             alt="Hands carefully sewing a beautiful patterned silk scrunchie on a rustic wooden table in warm natural light"
-            className="w-full h-full object-cover rounded-lg"
-            loading="eager"
+            className="object-cover rounded-lg"
+            fill
+            sizes="(max-width: 768px) 100vw, 800px"
+            priority
           />
         </div>
         {/* Decorative blurs */}
